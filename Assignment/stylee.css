@@ -1,0 +1,71 @@
+/* Base/Layout */
+:root{
+  --bg:#0f1724;
+  --card:#0b1220;
+  --muted:#94a3b8;
+  --accent:#7c3aed;
+  --accent2:#06b6d4;
+  --surface:#ffffff;
+  --container:1100px;
+  --radius:0.6rem;
+  --gap:1rem;
+  font-size:16px;
+  color-scheme: dark;
+}
+
+/* Reset & base */
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue';background:linear-gradient(180deg,#071026 0%, #081226 100%);color:#e6eef8}
+a{color:inherit}
+.container{max-width:var(--container);margin:0 auto;padding:2rem}
+/* Header */
+.site-header{background:transparent;position:sticky;top:0;z-index:50}
+.header-inner{display:flex;justify-content:space-between;align-items:center}
+.brand{display:flex;align-items:center;gap:0.75rem}
+.logo{width:44px;height:44px;border-radius:8px;background:linear-gradient(90deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;font-weight:700;color:#041021}
+.brand-text h1{font-size:1.05rem;margin:0}
+.brand-text .muted{color:var(--muted);font-size:0.85rem;margin-top:3px}
+.main-nav a{margin-left:1rem;padding:0.45rem 0.6rem;border-radius:6px;color:var(--muted);font-weight:600;transition:all .18s ease}
+.main-nav a:hover{color:var(--accent);transform:translateY(-3px)}
+.btn-ghost{border:1px solid rgba(255,255,255,0.06);padding:0.45rem 0.6rem;border-radius:6px}
+
+/* Hero */
+.hero{padding:4rem 0 3rem}
+.hero-grid{display:grid;grid-template-columns:1fr 320px;gap:2rem;align-items:center}
+.hero-text h2{font-size:clamp(1.6rem,3.6vw,2.4rem);margin:0}
+.lead{color:var(--muted);margin-top:0.5rem}
+.cta-row{margin-top:1rem;display:flex;gap:0.6rem}
+.btn-primary{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#041021;padding:0.6rem 0.9rem;border-radius:8px;font-weight:700;text-decoration:none}
+.btn-outline{border:1px solid rgba(255,255,255,0.06);padding:0.6rem 0.9rem;border-radius:8px;text-decoration:none}
+.hero-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:1.25rem;border-radius:12px;text-align:center}
+.avatar{width:140px;height:140px;border-radius:999px;object-fit:cover;display:block;margin:0 auto 0.6rem auto;box-shadow:0 8px 30px rgba(2,6,23,0.6)}
+.small{font-size:0.9rem;color:var(--muted)}
+.section-light{background:rgba(255,255,255,0.02);padding-top:2rem;padding-bottom:2rem;border-radius:10px;margin-top:1rem}
+
+/* Skills */
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:0.9rem;margin-top:1rem}
+.skill{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:0.9rem;border-radius:8px;text-align:center;font-weight:700;transition:transform .18s ease}
+.skill:hover{transform:translateY(-6px)}
+
+/* Projects */
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin-top:1rem}
+.project-card{padding:1rem;border-radius:10px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);display:flex;flex-direction:column;gap:0.6rem;transition:transform .18s ease}
+.project-card:hover{transform:translateY(-8px);box-shadow:0 12px 34px rgba(2,6,23,0.6)}
+.tags{display:flex;gap:0.4rem}
+.tags span{background:rgba(255,255,255,0.03);padding:0.25rem 0.45rem;border-radius:6px;font-size:0.8rem}
+
+/* Footer */
+.site-footer{padding:1rem 0;border-top:1px solid rgba(255,255,255,0.03);margin-top:2rem}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:1rem}
+
+/* small animation */
+@keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.hero-text, .project-card, .skill{animation:fadeUp .6s ease both}
+
+/* Responsive */
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr}
+  .header-inner{gap:0.6rem}
+  .main-nav{display:none} /* keep it simple for classroom assignment; show later with mobile nav if needed */
+  .footer-inner{flex-direction:column;align-items:flex-start}
+}

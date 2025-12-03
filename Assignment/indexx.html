@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio — Shamaya Dhariwal </title>
+  <link rel="stylesheet" href="stylee.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="logo">YN</div>
+        <div class="brand-text">
+          <h1>Shamaya Dhariwal</h1>
+          <p class="muted">Frontend Developer</p>
+        </div>
+      </div>
+
+      <nav class="main-nav" aria-label="Main">
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact" class="btn-ghost">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="hero" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h2>Hello — I'm <span class="accent">Shamaya Dhariwal</span></h2>
+          <p class="lead">I build clean and responsive web interfaces using modern HTML & CSS. I care about accessibility, performance and delightful micro-interactions.</p>
+          <div class="cta-row">
+            <a class="btn-primary" href="#projects">See projects</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <img src="profile.jpg" alt="Your profile photo" class="avatar">
+          <p class="muted small">Studying </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section-light">
+      <div class="container">
+        <h2>About</h2>
+        <p>I am a mid-level front-end developer who likes simple, practical solutions. My workflow includes planning responsive layouts, prototyping, and shipping production-ready code.</p>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="container">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+          <div class="skill">HTML5</div>
+          <div class="skill">CSS3 (Flexbox & Grid)</div>
+          <div class="skill">Responsive Design</div>
+          <div class="skill">JavaScript</div>
+          <div class="skill">Accessibility</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section-light">
+      <div class="container">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+          <article class="project-card">
+            <h3>Portfolio Website</h3>
+            <p class="muted">A static responsive portfolio made with plain HTML & CSS.</p>
+            <div class="tags"><span>HTML</span><span>CSS</span></div>
+            <a class="btn-link" href="#">View</a>
+          </article>
+
+          <article class="project-card">
+            <h3>Todo Console App</h3>
+            <p class="muted">Small practice CLI app in Python.</p>
+            <div class="tags"><span>Python</span></div>
+            <a class="btn-link" href="#">View</a>
+          </article>
+
+          <article class="project-card">
+            <h3>Landing Prototype</h3>
+            <p class="muted">Prototype with layout experiments and micro-interactions.</p>
+            <div class="tags"><span>HTML</span><span>CSS</span></div>
+            <a class="btn-link" href="#">View</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="container">
+        <h2>Contact</h2>
+        <p>Send me an email at <a href="mailto:shamayadhariwal@gmail.com">shamayadhariwal@gmail.com</a> or use the contact form on my GitHub profile.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Shamaya— Built with ❤️</p>
+      <p class="muted">Follow: <a href="#" aria-label="GitHub">GitHub</a> • <a href="#">LinkedIn</a></p>
+    </div>
+  </footer>
+
+  <script>
+    // small JS for year + progressive enhancement
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
