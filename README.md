@@ -1,5 +1,5 @@
 # CS-Fundamentals-
-# Static Portfolio Website — Your Name
+# Static Portfolio Website — Shamaya Dhariwal 
 
 A simple, responsive one-page portfolio website built using **HTML** and **CSS**.  
 This project was created as part of the Mini Project Assignment for the course  
